@@ -14,11 +14,12 @@
     <script src="./scripts/render.js"></script>
     <script src="./scripts/serch.js"></script>
     <script src="./scripts/template.js"></script>
+    <script src="./scripts/object.js"></script>
 </head>
 
 <body onload="loadPokemon()">
     <header>
-        <div>
+        <div class="headline-wrapper">
             <img src="" alt="">
             <h1>Pokedex</h1>
         </div>
@@ -28,9 +29,10 @@
         </div>
     </header>
     <main>
-        <section id="pokemon-container" class="pokemon-container">
-            <button class="load-more-btn">Load More</button>
-        </section>
+        <section id="pokemon-container" class="pokemon-container"></section>
+        <div class="load-more-btn-wrapper">
+        <button class="load-more-btn">Load More</button>
+        </div>
     </main>
     <footer>
         <div></div>
