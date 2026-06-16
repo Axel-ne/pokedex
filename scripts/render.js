@@ -7,3 +7,13 @@ function renderPokemon() {
         cardRef.innerHTML += getPokemonCardTemplate(allPokemon[i]);
     }
 }
+
+function renderTypes(types) {
+    let pkmtype = "";
+
+    for (let i = 0; i < types.length; i++) {
+        pkmtype += `<p>${types[i].type.name}</p>`;
+    }
+
+    return pkmtype;
+}
