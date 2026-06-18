@@ -13,6 +13,10 @@
     border: initial;
 }
 
+img{
+    width: 150px;
+}
+
 ::-webkit-scrollbar {
     background-color: transparent;
     width: 10px;
@@ -39,7 +43,7 @@ header {
 .headline-wrapper {
     display: flex;
     align-items: flex-start;
-
+width: 200px;
     h1 {
         font-size: 32px;
     }
@@ -141,5 +145,97 @@ div{
     display: flex;
     gap: 10px;
 }
+}
 
+.search-btn{
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+
+dialog{
+    margin: auto;
+    border: 10px solid black;
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+background: linear-gradient(145deg, #1f1f2e, #2a2a40);
+
+
+    .dialog-headline-wrapper{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        h2{
+            color: white;
+        }
+    }
+
+    .dialog-img-wrapper{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .dialog-type-wrapper{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+
+        p{
+            color: white;
+        }
+    }
+
+    .stats-table-wrapper{
+        margin-top: 20px;
+
+        table{
+            width: 100%;
+
+            tr{
+                width: 100%;
+
+                td{
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .spipe-btn-wrapper{
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+dialog::backdrop{
+    opacity: 0.5;
+    background-color: black;
+}
+
+.dialog-img-content{
+    height: 180px;
+    width: 180px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+button{
+    height: 30px;
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+}
+
+.close-btn{
+    border: none;
 }

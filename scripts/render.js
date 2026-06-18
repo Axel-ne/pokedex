@@ -8,6 +8,11 @@ function renderPokemon() {
     }
 }
 
+function renderNewPokemon(pokemon) {
+    const cardRef = document.getElementById("pokemon-container");
+    cardRef.innerHTML += getPokemonCardTemplate(pokemon);
+}
+
 function renderTypes(types) {
     let pkmtype = "";
 
@@ -16,4 +21,4 @@ function renderTypes(types) {
     }
 
     return pkmtype;
-}
+} 

@@ -1,0 +1,34 @@
+function filterPokemon(searchTerm) {
+    searchTerm = searchTerm.toLowerCase().trim();
+
+    const cardRef = document.getElementById("pokemon-container");
+
+    if (searchTerm.length < 3) {
+        renderPokemon();
+        return;
+    }
+
+    cardRef.innerHTML = "";
+
+    for (let i = 0; i < allPokemon.length; i++) {
+        if (allPokemon[i].name.toLowerCase().includes(searchTerm)) {
+            cardRef.innerHTML += getPokemonCardTemplate(allPokemon[i]);
+        }
+    }
+}
+
+function btn_R(id) {
+    if (id >= allPokemon.length) {
+        openDialog(1)
+    } else {
+        openDialog(id + 1);
+    }
+}
+
+function btn_L(id) {
+    if (id <= 1) {
+        openDialog(allPokemon.length);
+    } else {
+        openDialog(id - 1);
+    }
+}

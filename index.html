@@ -20,23 +20,23 @@
 <body onload="loadPokemon()">
     <header>
         <div class="headline-wrapper">
-            <img src="" alt="">
-            <h1>Pokedex</h1>
+            <img src="./assets/img/pokemon-seeklogo.png" alt="">
         </div>
         <div class="search-container">
-            <input type="text" placeholder="Search Pokémon">
-            <button>Search</button>
+            <input type="text" placeholder="Search Pokémon" oninput="filterPokemon(this.value)">
+            <!-- <button class="search-btn">Search</button> -->
         </div>
     </header>
     <main>
         <section id="pokemon-container" class="pokemon-container"></section>
         <div class="load-more-btn-wrapper">
-        <button class="load-more-btn">Load More</button>
+        <button class="load-more-btn" onclick="loadPokemon()">Load More</button>
         </div>
+        <dialog id="pokemon-dialog"></dialog>
     </main>
     <footer>
         <div></div>
     </footer>
 </body>
 
-</html>
+</html> 
