@@ -17,7 +17,7 @@ function filterPokemon(searchTerm) {
     }
 }
 
-function btn_R(id) {
+function chrdBtnRight(id) {
     if (id >= allPokemon.length) {
         openDialog(1)
     } else {
@@ -25,7 +25,7 @@ function btn_R(id) {
     }
 }
 
-function btn_L(id) {
+function cardBtnLeft(id) {
     if (id <= 1) {
         openDialog(allPokemon.length);
     } else {

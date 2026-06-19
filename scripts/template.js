@@ -48,8 +48,8 @@ function getDialogTemplate(pokemon) {
                 </tr>
             </table>
             <div class="spipe-btn-wrapper">
-            <button data-id="prev-button" onclick="btn_L(${pokemon.id})">L</button>
-            <button data-id="next-button" onclick="btn_R(${pokemon.id})">R</button>
+            <button data-id="prev-button" onclick="cardBtnLeft(${pokemon.id})">L</button>
+            <button data-id="next-button" onclick="chrdBtnRight(${pokemon.id})">R</button>
             </div>
         </div>
     `;
