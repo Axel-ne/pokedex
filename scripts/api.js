@@ -7,11 +7,12 @@ let offset = 0;
 const limit = 20;
 
 async function loadPokemon() {
+    showLoadingSpinner();
     const response = await fetch(
         `${BASE_URL}?limit=${limit}&offset=${offset}`
     );
-    const data = await response.json();
 
+    const data = await response.json();
     const pokemonList = data.results;
 
     for (let i = 0; i < pokemonList.length; i++) {
@@ -23,6 +24,5 @@ async function loadPokemon() {
     }
 
     offset += limit;
-
-    renderPokemon();
+hideLoadingSpinner();
 }

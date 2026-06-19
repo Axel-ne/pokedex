@@ -1,10 +1,10 @@
 function getPokemonCardTemplate(pokemon) {
     return /*html*/ `
-    <section class="card-content-section" onclick="openDialog(${pokemon.id})">
+    <section data-id="card" class="card-content-section" onclick="openDialog(${pokemon.id})">
         <p>#${pokemon.id} ${pokemon.name}</p>
         <div class="pokemon-card-wrapper"
             style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
-            <img src="${pokemon.sprites.other.home.front_default}" alt="">
+            <img data-id="card-image" src="${pokemon.sprites.other.home.front_default}" alt="">
         </div>
         <div class="type-wrapper">
             <div>
@@ -17,16 +17,16 @@ function getPokemonCardTemplate(pokemon) {
 
 function getDialogTemplate(pokemon) {
     return /*html*/ `
-    <div class="dialog-headline-wrapper">
+    <div data-id="overlay-pokemon-name" class="dialog-headline-wrapper">
         
         <h2># ${pokemon.id} ${pokemon.name}</h2>
         <div class="close-btn-wrapper">
-        <button class="close-btn" onclick="closeDialog()">X</button>
+        <button data-id="close-dialog-button" class="close-btn" onclick="closeDialog()">X</button>
         </div>
         </div>
         <div class="dialog-img-wrapper" >
             <div class="dialog-img-content" style="background-color: ${pokemonTypeColors[pokemon.types[0].type.name]}">
-        <img src="${pokemon.sprites.other.home.front_default}" alt="">
+        <img data-id="dialog-image" src="${pokemon.sprites.other.home.front_default}" alt="">
         </div>
         </div>
         <div class="dialog-type-wrapper">
@@ -48,8 +48,8 @@ function getDialogTemplate(pokemon) {
                 </tr>
             </table>
             <div class="spipe-btn-wrapper">
-            <button onclick="btn_L(${pokemon.id})">L</button>
-            <button onclick="btn_R(${pokemon.id})">R</button>
+            <button data-id="prev-button" onclick="btn_L(${pokemon.id})">L</button>
+            <button data-id="next-button" onclick="btn_R(${pokemon.id})">R</button>
             </div>
         </div>
     `;

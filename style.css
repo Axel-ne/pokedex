@@ -161,11 +161,12 @@ dialog{
     border-radius: 20px;
     height: 400px;
     width: 300px;
+    padding: 10px;
 background: linear-gradient(145deg, #1f1f2e, #2a2a40);
 
 
     .dialog-headline-wrapper{
-        margin-top: 10px;
+        
         display: flex;
         justify-content: center;
         gap: 40px;
@@ -202,6 +203,7 @@ background: linear-gradient(145deg, #1f1f2e, #2a2a40);
 
                 td{
                     color: white;
+                    text-align: left;
                 }
             }
         }
@@ -229,13 +231,49 @@ dialog::backdrop{
 }
 
 button{
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     border: 1px solid white;
     border-radius: 50%;
     color: white;
+    cursor: pointer;
 }
 
 .close-btn{
     border: none;
+}
+
+.pokemon-card-wrapper img:hover{
+    transform: scale(1.1);
+}
+
+.spinner-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+}
+
+.spinner{
+    height: 100px;
+    width: 100px;
+    border: 8px solid red;
+    border-top: 8px solid blue;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+
+.d-none{
+    display: none;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    } to{
+        transform: rotate(360deg);
+    }
 }
