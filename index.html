@@ -19,12 +19,14 @@
 
 <body onload="loadPokemon()">
     <header>
+        <div class="header-content-wrapper">
         <div class="headline-wrapper">
             <img src="./assets/img/pokemon-seeklogo.png" alt="">
         </div>
         <div class="search-container">
             <input data-id="search-input" type="text" placeholder="Search Pokémon" oninput="filterPokemon(this.value)">
             <!-- <button class="search-btn">Search</button> -->
+        </div>
         </div>
     </header>
     <main data-id="content">

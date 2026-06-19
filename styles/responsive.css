@@ -1,7 +1,18 @@
-@media screen and (max-width: 370px){
-    header{
+@media screen and (max-width: 370px) {
+    header {
         height: 100px;
         display: flex;
         flex-direction: column;
+
+        
     }
+
+    .header-content-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .headline-wrapper {
+            }
+        }
 }
+

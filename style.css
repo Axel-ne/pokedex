@@ -31,7 +31,7 @@ img{
 header {
     height: 8dvh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     padding: 20px;
@@ -39,14 +39,22 @@ header {
     background-color: #ef5350;
     color: white;
 }
-
+.header-content-wrapper{
+display: flex;
+            flex-direction: column;
+}
 .headline-wrapper {
     display: flex;
+    justify-content: center;
     align-items: flex-start;
 width: 200px;
     h1 {
         font-size: 32px;
     }
+}
+
+input{
+    border: 1px solid black;
 }
 
 .search-container {
@@ -276,4 +284,10 @@ button{
     } to{
         transform: rotate(360deg);
     }
+}
+
+.header-content-wrapper{
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
 }
