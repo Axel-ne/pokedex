@@ -2,13 +2,19 @@ function filterPokemon(searchTerm) {
     searchTerm = searchTerm.toLowerCase().trim();
 
     const cardRef = document.getElementById("pokemon-container");
+    const loadMoreBtn = document.querySelector('[data-id="load-more-button"]');
 
     if (searchTerm.length < 3) {
+        loadMoreBtn.style.display = "block";
         renderPokemon();
         return;
     }
 
+    loadMoreBtn.style.display = "none";
+
     cardRef.innerHTML = "";
+
+    
 
     for (let i = 0; i < allPokemon.length; i++) {
         if (allPokemon[i].name.toLowerCase().includes(searchTerm)) {

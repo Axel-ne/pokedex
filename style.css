@@ -291,3 +291,8 @@ button{
     justify-content: center;
     max-width: 1440px;
 }
+
+.load-more-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
